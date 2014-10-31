@@ -12,8 +12,9 @@ RUN git clone https://github.com/sstephenson/ruby-build.git /root/.rbenv/plugins
 RUN ./root/.rbenv/plugins/ruby-build/install.sh
 RUN echo 'eval "$(rbenv init -)"' >> /etc/profile
 RUN echo 'eval "$(rbenv init -)"' >> /root/.bashrc
-ENV PATH /root/.rbenv/bin:/.rbenv/shims:$PATH
+ENV PATH /root/.rbenv/bin:$PATH
+ENV RBENV_ROOT /root/.rbenv
 
 RUN rbenv install 2.1.2
-RUN echo "install: --no-document \n update: --no-document" >> /root/.gemrc
+RUN echo "install: --no-document\nupdate: --no-document" >> /root/.gemrc
 RUN rbenv global 2.1.2 && /.rbenv/shims/gem install bundler && rbenv rehash

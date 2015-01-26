@@ -15,6 +15,6 @@ RUN echo 'eval "$(rbenv init -)"' >> /etc/profile
 ENV PATH /root/.rbenv/bin:/root/.rbenv/shims:$PATH
 ENV RBENV_ROOT /root/.rbenv
 
-RUN rbenv install 2.1.5
+RUN rbenv install 2.2.0
 RUN echo "install: --no-document\nupdate: --no-document" >> /root/.gemrc
-RUN rbenv global 2.1.5 && /root/.rbenv/shims/gem install bundler && rbenv rehash
+RUN rbenv global 2.2.0 && /root/.rbenv/shims/gem install bundler && rbenv rehash

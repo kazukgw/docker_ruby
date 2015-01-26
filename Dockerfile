@@ -4,7 +4,7 @@ MAINTAINER Kazuya Kagawa "kazukgw@gmail.com"
 
 RUN apt-get update && apt-get install -y \
                 build-essential curl git zlib1g-dev libssl-dev \
-                libreadline-dev libyaml-dev libxml2-dev libxslt-dev
+                libffi-dev libreadline-dev libyaml-dev libxml2-dev libxslt-dev
 RUN apt-get clean
 
 RUN git clone https://github.com/sstephenson/rbenv.git /root/.rbenv

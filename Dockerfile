@@ -2,7 +2,7 @@ FROM ubuntu
 
 MAINTAINER Kazuya Kagawa "kazukgw@gmail.com"
 
-ENV HOME=/root
+ENV HOME /root
 ENV RUBY_VERSION 2.2.0
 
 RUN apt-get update && \

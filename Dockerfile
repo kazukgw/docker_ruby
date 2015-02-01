@@ -23,5 +23,5 @@ ENV RBENV_ROOT /root/.rbenv
 # install ruby
 RUN rbenv install $RUBY_VERSION
 RUN echo 'gem: --no-rdoc --no-ri' >> "$HOME/.gemrc"
-RUN rbenv global 2.2.0 && /root/.rbenv/shims/gem install bundler && rbenv rehash
+RUN rbenv global $RUBY_VERSION && /root/.rbenv/shims/gem install bundler && rbenv rehash
 

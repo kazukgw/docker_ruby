@@ -3,7 +3,7 @@ FROM ubuntu
 MAINTAINER Kazuya Kagawa "kazukgw@gmail.com"
 
 ENV HOME /root
-ENV RUBY_VERSION 2.2.0
+ENV RUBY_VERSION 2.2.1
 
 RUN apt-get update && \
       apt-get install -y \
